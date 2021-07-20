@@ -12,7 +12,7 @@ func TestHello(t *testing.T) {
 
 	requester, err := http.NewRequest(http.MethodGet, "/hello", nil)
 	if err != nil {
-		t.Fatalf("Error: ")
+		t.Fatalf("Error: %v", err)
 	}
 
 	hello(recorder, requester)
